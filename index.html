@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Colmenarez - Ingeniero Industrial</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+        }
+        .card {
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .tab-button {
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        .tab-button.active {
+            border-bottom-color: #3b82f6; /* Blue-500 */
+            color: #2563eb; /* Blue-600 */
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #e5e7eb; /* Gray-200 */
+        }
+        .timeline-item .dot {
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            transform: translateX(-45%);
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background-color: #3b82f6; /* Blue-500 */
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-4xl">
+        
+        <!-- Header Section -->
+        <header class="card p-8 mb-8 flex flex-col md:flex-row items-center text-center md:text-left">
+            <img src="https://placehold.co/150x150/3b82f6/ffffff?text=DC" alt="Foto de Diego Colmenarez" class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-blue-500 object-cover mb-6 md:mb-0 md:mr-8">
+            <div>
+                <h1 class="text-4xl font-bold text-gray-900">Diego Colmenarez</h1>
+                <h2 class="text-xl font-medium text-blue-600 mt-1">Ingeniero Industrial | Magíster en Gerencia Estratégica</h2>
+                <p class="mt-4 text-gray-600 leading-relaxed">
+                    Soy un Ingeniero Industrial con maestría en Gerencia Estratégica, enfocado en la aplicación de Inteligencia Artificial para la optimización de procesos. Me especializo en el uso de herramientas de IA e ingeniería de prompts para transformar operaciones, mejorar la productividad y desarrollar soluciones innovadoras. Mi objetivo es aplicar estrategias basadas en datos y tecnología de vanguardia para resolver desafíos complejos y generar un impacto medible en los objetivos de la organización.
+                </p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="card p-8">
+            <!-- Tabs Navigation -->
+            <div class="border-b border-gray-200 mb-8">
+                <nav class="flex space-x-4 sm:space-x-8 -mb-px" aria-label="Tabs">
+                    <button id="experiencia-btn" class="tab-button active py-4 px-1 text-lg font-semibold text-gray-500 hover:text-blue-600">
+                        <i class="fas fa-briefcase mr-2"></i>Experiencia
+                    </button>
+                    <button id="formacion-btn" class="tab-button py-4 px-1 text-lg font-semibold text-gray-500 hover:text-blue-600">
+                        <i class="fas fa-graduation-cap mr-2"></i>Formación
+                    </button>
+                     <button id="contribucion-btn" class="tab-button py-4 px-1 text-lg font-semibold text-gray-500 hover:text-blue-600">
+                        <i class="fas fa-hands-helping mr-2"></i>Contribución
+                    </button>
+                </nav>
+            </div>
+
+            <!-- Tabs Content -->
+            <div>
+                <!-- Experiencia Section -->
+                <div id="experiencia-content">
+                    <div class="timeline relative pl-6 space-y-8">
+                        <!-- Timeline Item -->
+                        <div class="timeline-item relative">
+                            <div class="dot"></div>
+                            <p class="font-semibold text-gray-500 text-sm">2021 - Presente</p>
+                            <h3 class="text-xl font-bold text-gray-800">Analista de Sistema de Gestión</h3>
+                            <p class="font-medium text-gray-600">Industrias Maros C.A. (NATULAC)</p>
+                            <p class="mt-2 text-gray-600">Lidero actividades de auditorías, normalización y mejora continua. Fui partícipe clave en el proyecto de certificación de 62 productos bajo la marca NORVEN, coordinando esfuerzos entre múltiples plantas.</p>
+                        </div>
+                        <!-- Timeline Item -->
+                        <div class="timeline-item relative">
+                            <div class="dot"></div>
+                            <p class="font-semibold text-gray-500 text-sm">2025</p>
+                            <h3 class="text-xl font-bold text-gray-800">Docente de Diplomado en Inocuidad</h3>
+                            <p class="font-medium text-gray-600">Universidad Nacional Experimental Simón Rodríguez</p>
+                            <p class="mt-2 text-gray-600">Impartí el módulo "KPIs para Impulsar la Mejora Continua en la Inocuidad Alimentaria", capacitando a profesionales en el uso de indicadores para optimizar la calidad.</p>
+                        </div>
+                         <!-- Timeline Item -->
+                        <div class="timeline-item relative">
+                            <div class="dot"></div>
+                            <p class="font-semibold text-gray-500 text-sm">2018 - 2019</p>
+                            <h3 class="text-xl font-bold text-gray-800">Gestor Logístico</h3>
+                            <p class="font-medium text-gray-600">Grupo Quincas C.A. (TEALCA)</p>
+                            <p class="mt-2 text-gray-600">Gestioné la logística de envíos, supervisé la carga y descarga, y mantuve una comunicación fluida entre sucursales para garantizar la eficiencia operativa.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formacion Section -->
+                <div id="formacion-content" class="hidden">
+                    <div class="timeline relative pl-6 space-y-8">
+                        <!-- Timeline Item -->
+                        <div class="timeline-item relative">
+                            <div class="dot"></div>
+                            <p class="font-semibold text-gray-500 text-sm">2023 - 2025</p>
+                            <h3 class="text-xl font-bold text-gray-800">Magister en Ciencias de la Administración</h3>
+                            <p class="font-medium text-gray-600">Universidad Nacional Experimental Simón Rodríguez</p>
+                            <p class="mt-2 text-gray-600">Mención en Gerencia Estratégica, profundizando en la toma de decisiones y planificación a largo plazo.</p>
+                        </div>
+                        <!-- Timeline Item -->
+                        <div class="timeline-item relative">
+                            <div class="dot"></div>
+                            <p class="font-semibold text-gray-500 text-sm">2017 - 2021</p>
+                            <h3 class="text-xl font-bold text-gray-800">Ingeniero Industrial</h3>
+                            <p class="font-medium text-gray-600">Universidad Yacambú</p>
+                            <p class="mt-2 text-gray-600">Formación integral en optimización de sistemas productivos, calidad y logística.</p>
+                        </div>
+                        <!-- Timeline Item -->
+                        <div class="timeline-item relative">
+                            <div class="dot"></div>
+                             <p class="font-semibold text-gray-500 text-sm">2021 - 2025</p>
+                            <h3 class="text-xl font-bold text-gray-800">Certificaciones Clave</h3>
+                            <p class="font-medium text-gray-600">Google, MIT, EOI, entre otros.</p>
+                            <ul class="mt-2 text-gray-600 list-disc list-inside space-y-1">
+                                <li>Inteligencia Artificial Generativa (MIT)</li>
+                                <li>Inteligencia Artificial y Productividad (Google)</li>
+                                <li>Comercio Electrónico (Google & EOI)</li>
+                                <li>Modelamiento de Procesos en Bizagi Modeler</li>
+                                <li>Norma ISO 9001:2015</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contribucion Section -->
+                <div id="contribucion-content" class="hidden">
+                     <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <i class="fas fa-cogs text-3xl text-blue-500 mb-3"></i>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Optimización de Procesos con IA</h3>
+                            <p class="text-gray-600">Aplico herramientas de Inteligencia Artificial para analizar, rediseñar y automatizar flujos de trabajo, mejorando radicalmente la eficiencia.</p>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <i class="fas fa-brain text-3xl text-blue-500 mb-3"></i>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Estrategia y Productividad con IA</h3>
+                            <p class="text-gray-600">Implemento soluciones basadas en IA para potenciar la toma de decisiones estratégicas y aumentar la productividad del equipo.</p>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <i class="fas fa-terminal text-3xl text-blue-500 mb-3"></i>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Ingeniería de Prompts</h3>
+                            <p class="text-gray-600">Diseño y refino prompts de alta precisión para interactuar con modelos de lenguaje avanzados, extrayendo información valiosa y generando contenido de alto impacto.</p>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <i class="fas fa-store text-3xl text-blue-500 mb-3"></i>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">E-commerce y Meta ADS</h3>
+                            <p class="text-gray-600">Poseo conocimientos en la gestión de plataformas de comercio electrónico y campañas en Meta ADS para impulsar la presencia digital.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Contact Section -->
+        <footer class="text-center mt-8">
+             <div class="card p-8">
+                <h3 class="text-2xl font-bold text-gray-900">¿Listo para llevar sus procesos al siguiente nivel?</h3>
+                <p class="mt-2 mb-6 text-gray-600">Hablemos sobre cómo puedo contribuir a los propósitos de su empresa.</p>
+                <a href="mailto:diegocolmenarez13@gmail.com" class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-lg">
+                    <i class="fas fa-envelope mr-2"></i> Envíame un Correo
+                </a>
+                <div class="mt-6 flex justify-center space-x-6">
+                    <p class="text-gray-600"><i class="fas fa-phone mr-2 text-blue-500"></i> +58 0412-6721331</p>
+                    <p class="text-gray-600"><i class="fas fa-map-marker-alt mr-2 text-blue-500"></i> Lara, Venezuela</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // JavaScript for Tab Functionality
+        const tabs = {
+            experiencia: {
+                btn: document.getElementById('experiencia-btn'),
+                content: document.getElementById('experiencia-content')
+            },
+            formacion: {
+                btn: document.getElementById('formacion-btn'),
+                content: document.getElementById('formacion-content')
+            },
+            contribucion: {
+                btn: document.getElementById('contribucion-btn'),
+                content: document.getElementById('contribucion-content')
+            }
+        };
+
+        function switchTab(activeTabKey) {
+            Object.keys(tabs).forEach(key => {
+                const is_active = key === activeTabKey;
+                tabs[key].btn.classList.toggle('active', is_active);
+                tabs[key].content.classList.toggle('hidden', !is_active);
+            });
+        }
+
+        tabs.experiencia.btn.addEventListener('click', () => switchTab('experiencia'));
+        tabs.formacion.btn.addEventListener('click', () => switchTab('formacion'));
+        tabs.contribucion.btn.addEventListener('click', () => switchTab('contribucion'));
+
+        // Set initial tab
+        switchTab('experiencia');
+    </script>
+
+</body>
+</html>
